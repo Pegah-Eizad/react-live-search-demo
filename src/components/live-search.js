@@ -16,7 +16,8 @@ export default class LiveSearch extends React.Component{
   onSearchInputChange(searchInput){
     console.log(searchInput);
     let filteredCharacters = this.props.characters.filter(character => {
-      if (character.name.toLowerCase().includes(searchInput)){
+      let search = searchInput.toLowerCase();
+      if (character.name.toLowerCase().includes(search)){
         return character;
       }
       else{
